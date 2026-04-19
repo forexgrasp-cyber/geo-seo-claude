@@ -1,9 +1,6 @@
 /**
- * Glitch City Crew - SIMPLIFIED VERSION
- * - Hero video as background
- * - Action footage in sequences
- * - Proper audio
- * - Text overlays
+ * Glitch City Crew - REAL HERO VERSION
+ * Uses the actual hero avatar from avatart_vied.mp4
  */
 import {
   AbsoluteFill,
@@ -12,7 +9,6 @@ import {
   Video,
   Audio,
   staticFile,
-  interpolate,
 } from 'remotion';
 
 export const GlitchCrewVideo = () => {
@@ -27,26 +23,38 @@ export const GlitchCrewVideo = () => {
         loop={true}
       />
 
-      {/* Scene 1: Fire Performer (0-10s) */}
-      <Sequence durationInFrames={300}>
+      {/* HERO VIDEO: Main character throughout (background) */}
+      <Sequence durationInFrames={1500}>
         <Video
-          src={staticFile('assets/videos/fire-performer.mp4')}
+          src={staticFile('assets/videos/real-hero.mp4')}
           style={{
             width: '100%',
             height: '100%',
             objectFit: 'cover',
           }}
         />
+      </Sequence>
+
+      {/* Scene 1: Fire overlay (0-10s) */}
+      <Sequence durationInFrames={300}>
         <div style={{
           position: 'absolute',
-          top: '50%',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          background: 'linear-gradient(180deg, transparent 60%, rgba(255,100,0,0.3) 100%)',
+        }} />
+        <div style={{
+          position: 'absolute',
+          bottom: 100,
           left: '50%',
-          transform: 'translate(-50%, -50%)',
+          transform: 'translateX(-50%)',
           textAlign: 'center',
         }}>
           <h1 style={{
             color: '#fff',
-            fontSize: '5rem',
+            fontSize: '4rem',
             fontWeight: '900',
             textTransform: 'uppercase',
             textShadow: '0 0 30px #ff0000',
@@ -57,27 +65,26 @@ export const GlitchCrewVideo = () => {
         </div>
       </Sequence>
 
-      {/* Scene 2: Neon Dancer (10-20s) */}
+      {/* Scene 2: Neon effects (10-20s) */}
       <Sequence from={300} durationInFrames={300}>
-        <Video
-          src={staticFile('assets/videos/neon-dancer.mp4')}
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            filter: 'hue-rotate(20deg) saturation(1.5)',
-          }}
-        />
         <div style={{
           position: 'absolute',
-          top: '50%',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          background: 'linear-gradient(90deg, rgba(0,255,255,0.2) 0%, transparent 50%, rgba(255,0,255,0.2) 100%)',
+        }} />
+        <div style={{
+          position: 'absolute',
+          bottom: 100,
           left: '50%',
-          transform: 'translate(-50%, -50%)',
+          transform: 'translateX(-50%)',
           textAlign: 'center',
         }}>
           <h1 style={{
             color: '#00ffff',
-            fontSize: '4rem',
+            fontSize: '3.5rem',
             fontWeight: '900',
             textShadow: '0 0 30px #00ffff',
             margin: 0,
@@ -87,21 +94,21 @@ export const GlitchCrewVideo = () => {
         </div>
       </Sequence>
 
-      {/* Scene 3: Hero + Abstract (20-30s) */}
+      {/* Scene 3: Glitch intensity (20-30s) */}
       <Sequence from={600} durationInFrames={300}>
-        <Video
-          src={staticFile('assets/videos/hero_0.mp4')}
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-          }}
-        />
         <div style={{
           position: 'absolute',
-          top: '50%',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          background: 'radial-gradient(circle, transparent 40%, rgba(255,0,255,0.4) 100%)',
+        }} />
+        <div style={{
+          position: 'absolute',
+          bottom: 100,
           left: '50%',
-          transform: 'translate(-50%, -50%)',
+          transform: 'translateX(-50%)',
           textAlign: 'center',
         }}>
           <h1 style={{
@@ -116,22 +123,22 @@ export const GlitchCrewVideo = () => {
         </div>
       </Sequence>
 
-      {/* Scene 4: Fire Climax (30-40s) */}
+      {/* Scene 4: Bass drop climax (30-40s) */}
       <Sequence from={900} durationInFrames={300}>
-        <Video
-          src={staticFile('assets/videos/fire-performer.mp4')}
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            filter: 'contrast(1.5) saturation(1.7)',
-          }}
-        />
         <div style={{
           position: 'absolute',
-          top: '50%',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          background: 'linear-gradient(180deg, rgba(255,255,0,0.3) 0%, transparent 100%)',
+          animation: 'pulse 0.5s infinite',
+        }} />
+        <div style={{
+          position: 'absolute',
+          bottom: 100,
           left: '50%',
-          transform: 'translate(-50%, -50%)',
+          transform: 'translateX(-50%)',
           textAlign: 'center',
         }}>
           <h1 style={{
@@ -148,20 +155,19 @@ export const GlitchCrewVideo = () => {
 
       {/* Scene 5: Finale (40-50s) */}
       <Sequence from={1200} durationInFrames={300}>
-        <Video
-          src={staticFile('assets/videos/neon-dancer.mp4')}
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            filter: 'saturation(1.8) hue-rotate(40deg)',
-          }}
-        />
         <div style={{
           position: 'absolute',
-          top: '50%',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          background: 'linear-gradient(45deg, rgba(0,255,255,0.3), rgba(255,0,255,0.3))',
+        }} />
+        <div style={{
+          position: 'absolute',
+          bottom: 100,
           left: '50%',
-          transform: 'translate(-50%, -50%)',
+          transform: 'translateX(-50%)',
           textAlign: 'center',
         }}>
           <h1 style={{
@@ -182,6 +188,13 @@ export const GlitchCrewVideo = () => {
           </p>
         </div>
       </Sequence>
+
+      <style>{`
+        @keyframes pulse {
+          0%, 100% { opacity: 0.3; }
+          50% { opacity: 0.6; }
+        }
+      `}</style>
     </AbsoluteFill>
   );
 };
