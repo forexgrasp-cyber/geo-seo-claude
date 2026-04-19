@@ -1,0 +1,55 @@
+name: Render Video
+
+on:
+  workflow_dispatch:
+    inputs:
+      composition:
+        description: 'Composition to render (e.g., GlitchCrewVideo)'
+        required: true
+        default: 'GlitchCrewVideo'
+      output_name:
+        description: 'Output file name (e.g., glitch-crew-final)'
+        required: true
+        default: 'glitch-crew-final'
+      scale:
+        description: 'Scale factor (1=100%, 0.5=50% for faster renders)'
+        required: true
+        default: '1'
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Render video
+        run: |
+          npx remotion render ${{ inputs.composition }} out/${{ inputs.output_name }}.mp4 \
+            --codec h264 \
+            --fps 30 \
+            --scale ${{ inputs.scale }} \
+            --concurrency 4
+        env:
+          REMOTION_SILENCE: '1'
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rendered-video
+          path: out/*.mp4
+          retention-days: 90

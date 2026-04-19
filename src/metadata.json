@@ -1,0 +1,38 @@
+{
+  "total_frames": 750,
+  "duration_seconds": 25,
+  "fps": 30,
+  "hero": "Test Hero",
+  "chapters": [
+    {
+      "text": "",
+      "frames": 150,
+      "video": "assets/videos/hero_0.mp4",
+      "audio": "assets/audio/hero-bass.mp3"
+    },
+    {
+      "text": "",
+      "frames": 150,
+      "video": "assets/videos/hero_1.mp4",
+      "audio": "assets/audio/hero-bass.mp3"
+    },
+    {
+      "text": "",
+      "frames": 150,
+      "video": "assets/videos/hero_2.mp4",
+      "audio": "assets/audio/hero-bass.mp3"
+    },
+    {
+      "text": "",
+      "frames": 150,
+      "video": "assets/videos/hero_0.mp4",
+      "audio": "assets/audio/hero-bass.mp3"
+    },
+    {
+      "text": "",
+      "frames": 150,
+      "video": "assets/videos/hero_1.mp4",
+      "audio": "assets/audio/hero-bass.mp3"
+    }
+  ]
+}

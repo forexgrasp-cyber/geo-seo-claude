@@ -1,0 +1,107 @@
+{
+  "hero": {
+    "id": "neon-phantom",
+    "name": "Neon Phantom",
+    "tagline": "Speed meets shadow",
+    "concept": "A cybernetic street racer emerging from neon-lit darkness, leaving trails of electric blue and magenta energy",
+    "visual_elements": {
+      "appearance": "Athletic build, wearing sleek black cybernetic suit with glowing circuit patterns",
+      "colors": ["electric blue", "magenta", "neon purple", "deep black"],
+      "effects": "Energy trails from hands and feet, glowing eyes, particle sparks",
+      "environment": "Dark urban alley with neon signs, wet pavement reflections, atmospheric fog",
+      "lighting": "High contrast chiaroscuro, neon rim lighting, volumetric fog"
+    },
+    "motion_profile": {
+      "primary": "Slow-mo confident walk towards camera",
+      "secondary": "Energy trails following movement",
+      "timing": "Synced to bass beats (0.8x speed for dramatic effect)",
+      "camera": "Low angle tracking shot, slight Dutch tilt"
+    },
+    "personality": "Mysterious, powerful, untouchable - the underground champion",
+    "target_audience": "18-34, tech-savvy, gamers, cyberpunk fans, street culture",
+    "viral_hooks": [
+      "First 3 seconds: Glowing eyes appear in darkness",
+      "5 second mark: First energy trail appears",
+      "8 second mark: Full reveal with neon explosion",
+      "Final frame: Direct eye contact with viewer"
+    ]
+  },
+  "ai_prompts": {
+    "midjourney_character": "full body shot of cybernetic street racer, sleek black suit with glowing blue circuit patterns, electric blue and magenta energy trails, glowing eyes, standing in dark neon-lit alley, wet pavement reflections, atmospheric fog, cinematic lighting, high contrast, rim lighting, 8k, hyperrealistic --ar 9:16 --style raw --q 2",
+    
+    "runway_video": "cybernetic street racer walking slowly towards camera in dark neon alley, electric blue and magenta energy trails flowing from body, glowing eyes, atmospheric fog, wet pavement reflections, cinematic slow motion, low angle shot, dramatic lighting --ar 9:16 --motion 8",
+    
+    "pika_video": "mysterious figure emerging from darkness, glowing blue eyes appear first, then cybernetic suit with neon circuit patterns becomes visible, energy trails swirl around body, dark urban alley background, neon signs reflecting on wet ground, cinematic reveal --ar 9:16",
+    
+    "stable_diffusion_bg": "dark urban alley at night, neon signs in blue and magenta, wet pavement with reflections, atmospheric fog, volumetric lighting, cyberpunk aesthetic, no people --ar 9:16"
+  },
+  "script": {
+    "duration_seconds": 15,
+    "fps": 30,
+    "total_frames": 450,
+    "scenes": [
+      {
+        "id": 1,
+        "timecode": "0:00-0:03",
+        "frames": 90,
+        "action": "Darkness, then glowing blue eyes appear in the shadows",
+        "text": "In the shadows...",
+        "music": "Deep bass build-up begins",
+        "effects": "Eyes glow intensifies, subtle particle sparks"
+      },
+      {
+        "id": 2,
+        "timecode": "0:03-0:06",
+        "frames": 90,
+        "action": "Silhouette emerges from fog, circuit patterns start glowing",
+        "text": "A legend awakens",
+        "music": "Bass drop hits, rhythmic beat starts",
+        "effects": "Neon circuits activate on suit, fog swirls"
+      },
+      {
+        "id": 3,
+        "timecode": "0:06-0:10",
+        "frames": 120,
+        "action": "Full figure revealed, walking forward with energy trails",
+        "text": "Neon Phantom",
+        "music": "Full beat with synth melody",
+        "effects": "Electric blue and magenta trails flow from body, sparks fly"
+      },
+      {
+        "id": 4,
+        "timecode": "0:10-0:13",
+        "frames": 90,
+        "action": "Close-up on face, direct eye contact with viewer",
+        "text": "Speed meets shadow",
+        "music": "Beat intensifies, bass boost",
+        "effects": "Eyes glow brighter, energy aura pulses"
+      },
+      {
+        "id": 5,
+        "timecode": "0:13-0:15",
+        "frames": 60,
+        "action": "Explosion of neon energy, fade to black",
+        "text": "Coming soon",
+        "music": "Final bass hit with reverb tail",
+        "effects": "Neon explosion, particle burst, fade out"
+      }
+    ]
+  },
+  "music_direction": {
+    "genre": "Cyberpunk Bass / Dark Synthwave",
+    "tempo": "80-90 BPM (half-time feel)",
+    "elements": [
+      "Deep sub-bass drops",
+      "Glitchy electronic percussion",
+      "Atmospheric synth pads",
+      "Neon-style arpeggiated leads"
+    ],
+    "free_sources": [
+      "Epidemic Sound (free trial)",
+      "Artlist (free trial)",
+      "YouTube Audio Library (free)",
+      "Pixabay Music (free)"
+    ],
+    "search_terms": "cyberpunk, dark synthwave, bass heavy, neon, futuristic"
+  }
+}
